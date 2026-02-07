@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Magical Code</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@charset "utf-8";
+
+/****************************************
+Standard Theme
+****************************************/
+
+/* All */
+html,body,header,main,article,nav,aside,section,footer,
+ol,ul,li,h1,h2,h3,h4,h5,h6,div,p,a,span,img {
+margin:0;
+padding:0;
+}
+
+html {
+overflow-y:scroll;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+color:#666666;
+}
+
+body {
+color:#666666;
+font:normal 100%/160% sans-serif;
+background-color:#ffffff;
+word-break:break-all;
+text-size-adjust:none;
+}
+
+header {
+background-color:#ffffff;
+}
+
+footer {
+padding-top:0;
+padding-bottom:0;
+}
+
+ol,ul,li {
+list-style-type:none;
+}
+
+header,
+main,
+footer {
+width:100%;
+margin:0 auto;
+}
+
+main {
+padding-bottom:20px;
+}
+
+main h1 {
+border:2px solid #dddddd;
+background-color:#fcfcfc;
+border-radius:6px;
+}
+
+main h2 {
+border-top:2px solid #dddddd;
+border-bottom:2px solid #dddddd;
+}
+
+h1,
+h2 {
+margin:20px 0 10px 0;
+padding:4px 16px;
+color:#666666;
+}
+
+main p {
+padding-bottom:20px;
+}
+
+main img {
+max-width:100%;
+}
+
+.linklc,
+.linkwd {
+display:flex;
+flex-wrap:wrap;
+}
+
+.linklc div,
+.linkwd a {
+margin:4px 4px;
+padding:4px 10px;
+border-radius:8px;
+border:2px solid #dddddd;
+}
+
+.lcsp {
+padding-top:16px;
+}
+
+.mnsp {
+padding-top:40px;
+}
+
+.inwd,
+.inps {
+display:inline-block;
+}
+
+.ck {
+color:#666666;
+background-color:#ffffff;
+border-radius:8px;
+border:2px solid #dddddd;
+padding:2px 16px;
+margin:8px 8px 8px 0;
+display:inline-block;
+}
+
+input[type="file"],
+input[type="button"] {
+display:none;
+}
+
+::placeholder {
+color:#cccccc;
+}
+
+.holder {
+position:relative;
+overflow:hidden;
+}
+
+.placeholder {
+pointer-events:none;
+user-select:none;
+position:absolute;
+font:normal 90%/160% sans-serif;
+color:#cccccc;
+padding:6px 2px;
+}
+
+.hidden {
+display:none;
+}
+
+.title,
+.txt {
+font:normal 90%/160% sans-serif;
+color:#666666;
+border:2px solid #dddddd;
+width:100%;
+box-sizing:border-box;
+outline:none;
+padding:0;
+margin:4px 0 0 0;
+border-radius:6px;
+}
+
+.txt {
+height:200px;
+resize:none;
+overflow-y:scroll;
+overflow-anchor:none;
+}
+
+.temp {
+font:normal 100%/160% sans-serif;
+color:#666666;
+background-color:#fcfcfc;
+border:2px solid #dddddd;
+padding:2px 12px;
+margin:8px 8px 0 0;
+border-radius:8px;
+}
+
+.push,
+.copy {
+font:normal 100%/160% sans-serif;
+color:#666666;
+background-color:#fcfcfc;
+border:2px solid #dddddd;
+padding:2px 12px;
+margin:8px 8px 0 0;
+border-radius:8px;
+display:inline-block;
+text-decoration:underline;
+cursor:pointer;
+width:48px;
+text-align:center;
+}
+
+input[type=radio] {
+display:none;
+}
+
+.rlab {
+position:relative;
+margin:8px 8px 8px 0;
+padding:4px 4px 4px 36px;
+width:72px;
+display:inline-block;
+border:2px solid #dddddd;
+border-radius:8px;
+}
+
+.rlab:after, .rlab:before {
+position:absolute;
+content:"";
+display:block;
+top:50%;
+}
+
+.rlab:after {
+left:10px;
+margin-top:-10px;
+width:16px;
+height:16px;
+border:2px solid #cccccc;
+border-radius:50%;
+}
+
+.rlab:before {
+left:15px;
+margin-top:-5px;
+width:10px;
+height:10px;
+background:#cccccc;
+border-radius:50%;
+opacity:0;
+}
+
+input[type=radio]:checked + .rlab:before {
+opacity:1;
+}
+
+.rlab:hover:after {
+border-color:#cccccc;
+}
+
+.info {
+border:2px solid #dddddd;
+color:#666666;
+padding:2px 16px;
+margin:8px 8px 8px 0;
+border-radius:8px;
+display:inline-block;
+}
+
+/* Small */
+@media screen and (max-width:480px){
+
+body {
+background-color:#ffffff;
+}
+
+h1,
+h2 {
+font:bold 100%/160% sans-serif;
+}
+
+header,
+main,
+footer {
+box-sizing:border-box;
+padding-right:10px;
+padding-left:10px;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+
+/* Medium */
+@media screen and (min-width:480px) and (max-width:860px){
+
+body {
+background-color:#ffffff;
+}
+
+h1,
+h2 {
+font:bold 100%/160% sans-serif;
+}
+
+header,
+main,
+footer {
+box-sizing:border-box;
+padding-right:40px;
+padding-left:40px;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+
+/* Large */
+@media screen and (min-width:860px){
+
+body {
+text-align:center;
+}
+
+h1 {
+font:bold 120%/160% sans-serif;
+}
+
+h2 {
+font:bold 115%/160% sans-serif;
+}
+
+main {
+display:inline-block;
+vertical-align:top;
+text-align:left;
+width:704px;
+min-height:540px;
+padding-right:20px;
+padding-left:20px;
+margin-top:20px;
+margin-bottom:20px;
+border:2px solid #dddddd;
+border-radius:10px;
+background-color:#ffffff;
+}
+
+.linklc div,
+.linkwd a {
+width:8em;
+text-align:center;
+}
+
+}
+/* End */
+</style>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAAxQTFRF////9PT05ubm3t7etdxP3QAAAJBJREFUeNqtk0sSwCAIQyHv/nfupgoZK6tmI0zCV41fkQBw5WEUCMiIMTxmPmYe71Q3Xmz4eC06z5aXrR4nyDLXKc/rCfI9Wbqth+aLmgKsAuw2BE2wM6s7xlgncRfY4k5GyAZ0gacAuS7tQihDvjE2jk2GKaxQbWp6QqCBL895Jp+viDVtCr5qJh3jz1L8jAf7/wMAKAuPLgAAAABJRU5ErkJggg==" sizes="32x32">
+<link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="192x192">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAAXNSR0IArs4c6QAAAAxQTFRF////9vb26enp3t7eZfVEXQAABNpJREFUeNrtnVuOpDAQBB3h+995tU9GYmZsKg0LEvlNi1B2YrsKA+3Vq1evXr26t/in9lM8AVi1/5IKwO2B+07qfbmxfynljsTYv9UNqbWP5IOCsYkbIj/JauiT8jk2b/JGyA+DRvsBcf+R2W7AfDmyAEBjm9eVG4dZ4NMV331tlva0lZE8j5l2W8GXyXhtXigIkG/lsw9kfpFXi8clo+EDbTa2+XrZd+LmzPA8m9syZp7IDIAAAlzLHLRTN6kC1zBL3k7dpHDBYMfyol1ZzJz4DNpn5MIRlP0AfV5jRE4KtIHJVzV0KPuMvSJdz0zQY7goJFhk1l6XstJoppEzCcuYDZCvygiWmEc4XVXUsdk5M7HNAtDYVk/o0mSzY07GDAWOrUskrlUIbFYozENyAXMSTzSk3iNYZpbZciWn9uCPMZ6UwYyag+FwzU04TKgPhmNVX5KkTOLQ0g4HyJHZcIrRg4ZZTF0xWpKGWR4RKRjN1Q0zKFjNkXAY2Bz81QOOuPmUey2B0UFTJPOaY0bL4NjU5pxib57LmAFEADg68g2hZyka7JgnF586Bqc8VRjUNoPlskLB6vQKmGTWQSGYW03ZaCqVrjCHMp0OiWsb7QPJHMu00Wnhi1GPgwo0YW2DYa90EsZZaByelz4rqvnYo0i05CbugsEc9I5kymgJG9RMnIU4HbtwhE11CvnI0uEkswKoJ0Inc6zfTduAzqV6BrqUDiv1DOjB+TSB3htdu/kIjn30YIRmoZ1hLiYWC7kvDjIumzs8liDq0Mwxs4OODymkY1CxRU7n0DsfB6eqQzOG7ptMoHGGmWB2Ca/D74+wZStKCtBhFjUskhhAR9fhXqCSVqO4CrrNHEcbyWAoj6GL4gbQebOuhJRDrze6rYPuH7TO6NxpZ6FZYbTMjDBZb8QAelBjZrP47Bk90+hmAD04MGCO14EYQq/fLtCPQTMLTbxph7kDCaDzUGOl19uTUSGHtvdCO9QAep81MmYH6cihc6uhl4zuxNDMWp0ws4t0CG2yZWfprRSL98Q95/kCg5l+HbWHmNvckViFpraFzaCGHM0uYx+kEI0Bs8ehO+H6YXx7XFbc78ZgAyHxJrix0fmcwRwEYP9MHLAkWL6NqG0McjHNTO2ClcJoIMBmsVrb9M/A6KD643OevwoeVODI0RaGsYJsLTA6yEdADa1gdJCPnFrO3L3tKdQQlGNBPgJqyereMYKr3y4mQVMkWMQGZlP652gtsDp7/lCo1b3Hf8Sah1MFWs68vvwDtEAchCOyesNGtfAIfsrcMGnF0AAEaDTyRyArVtsuE836tnf+EzUj5qBquIzZ5Ofchjmf/dczh2f1amoHzEGz/mKfQ6s7F79r1HMfz88FPWAOHhYKhMuYCahDm7ssc8BTqA2YF79jJykeXJ02OSHNOXNOnZVonOKF3P+9nebU+etRc+ocG1PmSkNXibM840XudY7NZnJgc5RACWIRMGfUXVj1qjG58D3ZM9ywEYc259gbN3xJC6ppMzWn3kvljxqtwYZr0LLORWMAoN1/6hp02dcJ6IEC5EjgWmTaFQJv4HIS7dzkJ2FLo10vTYgDpXZ7f+L8onQ9cXWlaQ58vRiBK7Sbid/gv9H9yKoiPOO7iALtKR9H3Ch5v2z56tWrV68eqR9fnGEU3CZ5qgAAAABJRU5ErkJggg==" sizes="180x180">
+<script>
+// Execute function before page display
+window.addEventListener('DOMContentLoaded',function(){
+
+phon();
+lang();
+code();
+copy();
+cock();
+
+});
+
+// Run in page view
+window.addEventListener('pageshow',function(){
+
+if(txt.value === ""){
+;
+}
+else{
+
+phoff();
+
+}
+
+lang();
+code();
+cock();
+
+});
+
+// copy function
+function copy() {
+let text = document.querySelector("#txt");
+text.select();
+document.execCommand("copy");
+}
+
+// cock function
+function cock() {
+document.querySelector("#copy").addEventListener("click", copy);
+}
+
+// phon function
+function phon() {
+
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ta.addEventListener('input', () => {
+ph.classList.toggle('hidden', ta.value !== '');
+});
+
+}
+
+// phoff function
+function phoff() {
+
+let ta = document.querySelector('textarea');
+let ph = document.querySelector('.placeholder');
+ph.classList.toggle('hidden', ta.value !== '');
+
+}
+
+// lang function
+function lang() {
+
+let code;
+var array = new Array();
+array["default"] = new Array({cd:"default", label:"## select code ##"});
+array["html"] = new Array(
+  {cd:"default", label:"## select code ##"},
+  {cd:"page", label:"Single page"},
+  {cd:"table", label:"Table"},
+  {cd:"comment", label:"Comment"},
+  {cd:"dtype", label:"Document Type"},
+  {cd:"metautf8", label:"Meta UTF-8"},
+  {cd:"description", label:"Meta Description"},
+  {cd:"keywords", label:"Meta Keywords"},
+  {cd:"viewport", label:"Meta Viewport"},
+  {cd:"a", label:"<a>"},
+  {cd:"body", label:"<body>"},
+  {cd:"br", label:"<br>"},
+  {cd:"div", label:"<div>"},
+  {cd:"span", label:"<span>"},
+  {cd:"style", label:"<style>"},
+  {cd:"h1", label:"<h1>"},
+  {cd:"h2", label:"<h2>"},
+  {cd:"h3", label:"<h3>"},
+  {cd:"h4", label:"<h4>"},
+  {cd:"h5", label:"<h5>"},
+  {cd:"h6", label:"<h6>"},
+  {cd:"p", label:"<p>"},
+  {cd:"head", label:"<head>"},
+  {cd:"html", label:"<html>"},
+  {cd:"img", label:"<img>"},
+  {cd:"main", label:"<main>"},
+  {cd:"title", label:"<title>"}
+);
+array["css"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"comments", label:"Comments"},
+  {cd:"multilinecm", label:"Multi line comments"},
+  {cd:"mediascreen", label:"media screen"},
+  {cd:"selector", label:"Selector"},
+  {cd:"class", label:"Class"},
+  {cd:"id", label:"Id"},
+  {cd:"background", label:"background"},
+  {cd:"bgcolor", label:"bg color"},
+  {cd:"bgimage", label:"bg image"},
+  {cd:"color", label:"color"},
+  {cd:"font", label:"font"},
+  {cd:"fontsize", label:"font size"},
+  {cd:"fontweight", label:"font weight"},
+  {cd:"fontstyle", label:"font style"},
+  {cd:"fontfamily", label:"font family"},
+  {cd:"textalign", label:"text align"},
+  {cd:"verticalalign", label:"vertical align"},
+  {cd:"lineheight", label:"line height"},
+  {cd:"textdecoration", label:"text decoration"},
+  {cd:"margin", label:"margin"},
+  {cd:"margintop", label:"margin top"},
+  {cd:"marginright", label:"margin right"},
+  {cd:"marginbottom", label:"margin bottom"},
+  {cd:"marginleft", label:"margin left"},
+  {cd:"padding", label:"padding"},
+  {cd:"paddingtop", label:"padding top"},
+  {cd:"paddingright", label:"padding right"},
+  {cd:"paddingbottom", label:"padding bottom"},
+  {cd:"paddingleft", label:"padding left"},
+  {cd:"border", label:"border"},
+  {cd:"borderwidth", label:"border width"},
+  {cd:"bordercolor", label:"border color"},
+  {cd:"borderstyle", label:"border style"},
+  {cd:"bordertop", label:"border top"},
+  {cd:"borderright", label:"border right"},
+  {cd:"borderbottom", label:"border bottom"},
+  {cd:"borderleft", label:"border left"},
+  {cd:"displayinline", label:"display inline"},
+  {cd:"displayblock", label:"display block"},
+  {cd:"clearleft", label:"clear left"},
+  {cd:"positionstatic", label:"position static"},
+  {cd:"positionrelative", label:"position relative"},
+  {cd:"positionabsolute", label:"position absolute"},
+  {cd:"positionfixed", label:"position fixed"},
+  {cd:"top", label:"top"},
+  {cd:"right", label:"right"},
+  {cd:"bottom", label:"bottom"},
+  {cd:"left", label:"left"},
+  {cd:"liststyle", label:"list style"}
+];
+array["javascript"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"jsreplace", label:"Replace button"},
+  {cd:"hide", label:"Hide button"},
+  {cd:"getelementbyid", label:"getElementById"},
+  {cd:"function", label:"function"},
+  {cd:"const", label:"const"},
+  {cd:"let", label:"let"},
+  {cd:"var", label:"var"},
+  {cd:"getfullyear", label:"GetFullYear"},
+  {cd:"date", label:"Date"},
+  {cd:"gettime", label:"GetTime"},
+  {cd:"getday", label:"GetDay"},
+  {cd:"toutcstring", label:"ToUTCString"},
+  {cd:"clock", label:"JS Clock"}
+];
+array["php"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"syntax", label:"syntax"},
+  {cd:"phpcomment", label:"comment"},
+  {cd:"phpmultilinecm", label:"php multilinecm"},
+  {cd:"echo", label:"echo"},
+  {cd:"variable", label:"variable"},
+  {cd:"string", label:"string"},
+  {cd:"integer", label:"integer"},
+  {cd:"float", label:"float"},
+  {cd:"bool", label:"bool"},
+  {cd:"sum", label:"sum"},
+  {cd:"array", label:"array"},
+  {cd:"shortarray", label:"shortarray"},
+  {cd:"associativearray", label:"associativearray"},
+  {cd:"unset", label:"unset"},
+  {cd:"if", label:"if"},
+  {cd:"variablecurly", label:"variablecurly"},
+  {cd:"while", label:"while"},
+  {cd:"for", label:"for"},
+  {cd:"foreach", label:"foreach"},
+  {cd:"callable", label:"callable"}
+];
+array["angular"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"basictypescript", label:"Basic Typescript"},
+  {cd:"basichtml", label:"Basic Html"},
+  {cd:"eventbinding", label:"Event Binding"},
+  {cd:"propertybinding", label:"Property Binding"},
+  {cd:"twowaybinding", label:"Twoway Binding"},
+  {cd:"ngiftypescript", label:"Ngif Typescript"},
+  {cd:"ngifhtml", label:"Ngif Html"},
+  {cd:"ngfortypescript", label:"Ngfor Typescript"},
+  {cd:"ngforhtml", label:"Ngfor Html"},
+  {cd:"ngclasstypescript", label:"Ngclass Typescript"},
+  {cd:"ngclasshtml", label:"Ngclass Html"},
+  {cd:"ngstyletypescript", label:"Ngstyle Typescript"},
+  {cd:"ngstylehtml", label:"Ngstyle Html"},
+  {cd:"ngmodeltypescript", label:"Ngmodel Typescript"},
+  {cd:"ngmodelhtml", label:"Ngmodel Html"},
+  {cd:"templatereferencevariable", label:"Template Reference Variable"},
+  {cd:"valid", label:"Valid"},
+  {cd:"datepipe", label:"Date Pipe"},
+  {cd:"uppercasepipe", label:"Uppercase Pipe"},
+  {cd:"lowercasepipe", label:"Lowercase Pipe"},
+  {cd:"titlecasepipe", label:"Titlecase Pipe"},
+  {cd:"slicepipe", label:"Slice Pipe"},
+  {cd:"decimalpipe", label:"Decimal Pipe"},
+  {cd:"percentpipe", label:"Percent Pipe"},
+  {cd:"currencypipe", label:"Currency Pipe"},
+  {cd:"keyvaluepipecomponent", label:"Keyvalue Pipe Component"},
+  {cd:"keyvaluepipetemplate", label:"Keyvalue Pipe Template"},
+  {cd:"jsonpipecomponent", label:"Json Pipe Component"},
+  {cd:"jsonpipetemplate", label:"Json Pipe Template"},
+  {cd:"asyncpipecomponent", label:"Async Pipe Component"},
+  {cd:"asyncpipetemplate", label:"Async Pipe Template"}
+];
+array["jquery"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"jqfunction", label:"jqfunction"},
+  {cd:"alert", label:"Alert"},
+  {cd:"jqselector", label:"jqSelector"},
+  {cd:"css", label:"css"},
+  {cd:"fadeto", label:"fadeto"},
+  {cd:"slideup", label:"slideup"},
+  {cd:"slidedown", label:"slidedown"},
+  {cd:"slidetoggle", label:"slidetoggle"},
+  {cd:"select", label:"select"},
+  {cd:"focus", label:"focus"},
+  {cd:"text", label:"text"},
+  {cd:"wrap", label:"wrap"},
+  {cd:"replacewith", label:"replacewith"},
+  {cd:"jqhtml", label:"html"},
+  {cd:"prepend", label:"prepend"},
+  {cd:"append", label:"append"},
+  {cd:"after", label:"after"},
+  {cd:"before", label:"before"},
+  {cd:"remove", label:"remove"},
+  {cd:"length", label:"length"},
+  {cd:"parent", label:"parent"},
+  {cd:"find", label:"find"},
+  {cd:"children", label:"children"},
+  {cd:"end", label:"end"},
+  {cd:"empty", label:"empty"},
+  {cd:"sort", label:"sort"},
+  {cd:"next", label:"next"},
+  {cd:"show", label:"show"},
+  {cd:"jqhide", label:"jqhide"},
+  {cd:"toggle", label:"toggle"},
+  {cd:"get", label:"get"},
+  {cd:"prev", label:"prev"},
+  {cd:"contents", label:"contents"},
+  {cd:"every", label:"every"},
+  {cd:"noop", label:"noop"}
+];
+array["vue"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"template", label:"Template"},
+  {cd:"vtext", label:"v-text"},
+  {cd:"vbind", label:"v-bind"},
+  {cd:"vbindclass", label:"v-bindclass"},
+  {cd:"vbindstyle", label:"v-bindstyle"},
+  {cd:"vmodel", label:"v-model"},
+  {cd:"von", label:"v-on"},
+  {cd:"vif", label:"v-if"},
+  {cd:"velseif", label:"v-else-if"},
+  {cd:"velse", label:"v-else"},
+  {cd:"vshow", label:"v-show"},
+  {cd:"vfor", label:"v-for"},
+  {cd:"computed", label:"computed"},
+  {cd:"watch", label:"watch"}
+];
+array["react"] = [
+  {cd:"default", label:"## select code ##"},
+  {cd:"component", label:"Component"},
+  {cd:"jsx", label:"JSX"},
+  {cd:"props", label:"Props"},
+  {cd:"state", label:"State"},
+  {cd:"eventhandling", label:"EventHandling"},
+  {cd:"list", label:"List"},
+  {cd:"basic", label:"Basic"},
+  {cd:"str", label:"String"},
+  {cd:"num", label:"Number"},
+  {cd:"arry", label:"Array"},
+  {cd:"func", label:"Function"},
+  {cd:"obj", label:"Object"}
+];
+
+document.getElementById('language').onchange = function(){
+  code = document.getElementById("code");
+  code.options.length = 0
+  var changedPref = language.value;
+  for (let i = 0; i < array[changedPref].length; i++) {
+    var op = document.createElement("option");
+    value = array[changedPref][i]
+    op.value = value.cd;
+    op.text = value.label;
+    code.appendChild(op);
+  }
+}
+
+}
+
+// code function
+function code() {
+
+document.getElementById('language').addEventListener('change', function() {
+document.getElementById('txt').textContent = ``;
+phoff();
+});
+
+document.getElementById('code').addEventListener('change', function() {
+const selectElement = document.getElementById('code');
+const selectedValue = selectElement.value;
+const selectedText = selectElement.options[selectElement.selectedIndex].text;
+if(selectedValue === 'default'){
+document.getElementById('txt').textContent = ``;
+}
+else if(selectedValue === 'page'){
+document.getElementById('txt').textContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Single page</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header id="top">
+<p>Text</p>
+</header>
+
+<main>
+<article>
+
+<h1>Main title</h1>
+
+<h2>Sub title</h2>
+<p>Text</p>
+
+<h2>Sub title</h2>
+<p>Text</p>
+
+<h2>Sub title</h2>
+<p>Text</p>
+
+</article>
+</main>
+
+<footer>
+<p>Text</p>
+</footer>
+
+</body>
+</html>`;
+}
+else if(selectedValue === 'table'){
+document.getElementById('txt').textContent = `<table>
+  <tr>
+    <th>Title</th>
+    <th>Title</th>
+  </tr>
+  <tr>
+    <td>Text</td>
+    <td>Text</td>
+  </tr>
+</table>`;
+}
+else if(selectedValue === 'comment'){
+document.getElementById('txt').textContent = `<!--  -->`;
+}
+else if(selectedValue === 'dtype'){
+document.getElementById('txt').textContent = `<!DOCTYPE html>`;
+}
+else if(selectedValue === 'metautf8'){
+document.getElementById('txt').textContent = `<meta charset="UTF-8">`;
+}
+else if(selectedValue === 'description'){
+document.getElementById('txt').textContent = `<meta name="description" content="*">`;
+}
+else if(selectedValue === 'keywords'){
+document.getElementById('txt').textContent = `<meta name="keywords" content="*">`;
+}
+else if(selectedValue === 'viewport'){
+document.getElementById('txt').textContent = `<meta name="viewport" content="width=device-width, initial-scale=1.0">`;
+}
+else if(selectedValue === 'a'){
+document.getElementById('txt').textContent = `<a href="https://"></a>`;
+}
+else if(selectedValue === 'body'){
+document.getElementById('txt').textContent = `<body></body>`;
+}
+else if(selectedValue === 'br'){
+document.getElementById('txt').textContent = `<br>`;
+}
+else if(selectedValue === 'div'){
+document.getElementById('txt').textContent = `<div></div>`;
+}
+else if(selectedValue === 'span'){
+document.getElementById('txt').textContent = `<span></span>`;
+}
+else if(selectedValue === 'style'){
+document.getElementById('txt').textContent = `<style></style>`;
+}
+else if(selectedValue === 'h1'){
+document.getElementById('txt').textContent = `<h1></h1>`;
+}
+else if(selectedValue === 'h2'){
+document.getElementById('txt').textContent = `<h2></h2>`;
+}
+else if(selectedValue === 'h3'){
+document.getElementById('txt').textContent = `<h3></h3>`;
+}
+else if(selectedValue === 'h4'){
+document.getElementById('txt').textContent = `<h4></h4>`;
+}
+else if(selectedValue === 'h5'){
+document.getElementById('txt').textContent = `<h5></h5>`;
+}
+else if(selectedValue === 'h6'){
+document.getElementById('txt').textContent = `<h6></h6>`;
+}
+else if(selectedValue === 'p'){
+document.getElementById('txt').textContent = `<p></p>`;
+}
+else if(selectedValue === 'head'){
+document.getElementById('txt').textContent = `<head></head>`;
+}
+else if(selectedValue === 'html'){
+document.getElementById('txt').textContent = `<html lang="en"></html>`;
+}
+else if(selectedValue === 'img'){
+document.getElementById('txt').textContent = `<img src="*" alt="*">`;
+}
+else if(selectedValue === 'main'){
+document.getElementById('txt').textContent = `<main></main>`;
+}
+else if(selectedValue === 'title'){
+document.getElementById('txt').textContent = `<title></title>`;
+}
+else if(selectedValue === 'comments'){
+document.getElementById('txt').textContent = `/* This is a single-line comment */`;
+}
+else if(selectedValue === 'multilinecm'){
+document.getElementById('txt').textContent = `/*
+ * This is a multi-line comment.
+ * Text
+ * Text
+ */`;
+}
+else if(selectedValue === 'mediascreen'){
+document.getElementById('txt').textContent = `@media screen and (min-width: 240px) {
+  /* Phone */
+}
+@media screen and (min-width: 480px) {
+  /* Tablet */
+}
+@media screen and (min-width: 960px) {
+  /* PC */
+}`;
+}
+else if(selectedValue === 'selector'){
+document.getElementById('txt').textContent = `p {
+  
+}`;
+}
+else if(selectedValue === 'class'){
+document.getElementById('txt').textContent = `.my-class {
+  
+}`;
+}
+else if(selectedValue === 'id'){
+document.getElementById('txt').textContent = `#my-id {
+  
+}`;
+}
+else if(selectedValue === 'background'){
+document.getElementById('txt').textContent = `background: #ffffff url(back.png) repeat-x right top fixed;`;
+}
+else if(selectedValue === 'bgcolor'){
+document.getElementById('txt').textContent = `background-color: #ffffff;`;
+}
+else if(selectedValue === 'bgimage'){
+document.getElementById('txt').textContent = `background-image: url(back.png);`;
+}
+else if(selectedValue === 'color'){
+document.getElementById('txt').textContent = `color: #000000;`;
+}
+else if(selectedValue === 'font'){
+document.getElementById('txt').textContent = `font: italic normal bold 100%/160%  sans-serif;`;
+}
+else if(selectedValue === 'fontsize'){
+document.getElementById('txt').textContent = `font-size: 16px;`;
+}
+else if(selectedValue === 'fontweight'){
+document.getElementById('txt').textContent = `font-weight: bold;`;
+}
+else if(selectedValue === 'fontstyle'){
+document.getElementById('txt').textContent = `font-style: italic;`;
+}
+else if(selectedValue === 'fontfamily'){
+document.getElementById('txt').textContent = `font-family: sans-serif;`;
+}
+else if(selectedValue === 'textalign'){
+document.getElementById('txt').textContent = `text-align: center;`;
+}
+else if(selectedValue === 'verticalalign'){
+document.getElementById('txt').textContent = `vertical-align: top;`;
+}
+else if(selectedValue === 'lineheight'){
+document.getElementById('txt').textContent = `line-height: 160%;`;
+}
+else if(selectedValue === 'textdecoration'){
+document.getElementById('txt').textContent = `text-decoration: underline;`;
+}
+else if(selectedValue === 'margin'){
+document.getElementById('txt').textContent = `margin: 10px 20px 30px 40px;`;
+}
+else if(selectedValue === 'margintop'){
+document.getElementById('txt').textContent = `margin-top: 20px;`;
+}
+else if(selectedValue === 'marginright'){
+document.getElementById('txt').textContent = `margin-right: 20px;`;
+}
+else if(selectedValue === 'marginbottom'){
+document.getElementById('txt').textContent = `margin-bottom: 20px;`;
+}
+else if(selectedValue === 'marginleft'){
+document.getElementById('txt').textContent = `margin-left: 20px;`;
+}
+else if(selectedValue === 'padding'){
+document.getElementById('txt').textContent = `padding: 10px 20px 30px 40px;`;
+}
+else if(selectedValue === 'paddingtop'){
+document.getElementById('txt').textContent = `padding-top: 20px;`;
+}
+else if(selectedValue === 'paddingright'){
+document.getElementById('txt').textContent = `padding-right: 20px;`;
+}
+else if(selectedValue === 'paddingbottom'){
+document.getElementById('txt').textContent = `padding-bottom: 20px;`;
+}
+else if(selectedValue === 'paddingleft'){
+document.getElementById('txt').textContent = `padding-left: 20px;`;
+}
+else if(selectedValue === 'border'){
+document.getElementById('txt').textContent = `border: 1px #000000 solid;`;
+}
+else if(selectedValue === 'borderwidth'){
+document.getElementById('txt').textContent = `border-width: 2px 4px 6px 8px;`;
+}
+else if(selectedValue === 'bordercolor'){
+document.getElementById('txt').textContent = `border-color: #ff0000 #00ff00 #0000ff #000000;`;
+}
+else if(selectedValue === 'borderstyle'){
+document.getElementById('txt').textContent = `border-style: solid dashed double dotted;`;
+}
+else if(selectedValue === 'bordertop'){
+document.getElementById('txt').textContent = `border-top: 2px #ff0000 solid;`;
+}
+else if(selectedValue === 'borderright'){
+document.getElementById('txt').textContent = `border-right: 4px #00ff00 double;`;
+}
+else if(selectedValue === 'borderbottom'){
+document.getElementById('txt').textContent = `border-bottom: 6px #0000ff dotted;`;
+}
+else if(selectedValue === 'borderleft'){
+document.getElementById('txt').textContent = `border-left: 8px #000000 dashed;`;
+}
+else if(selectedValue === 'displayinline'){
+document.getElementById('txt').textContent = `display: inline;`;
+}
+else if(selectedValue === 'displayblock'){
+document.getElementById('txt').textContent = `display: block;`;
+}
+else if(selectedValue === 'clearleft'){
+document.getElementById('txt').textContent = `clear: left;`;
+}
+else if(selectedValue === 'positionstatic'){
+document.getElementById('txt').textContent = `position: static;`;
+}
+else if(selectedValue === 'positionrelative'){
+document.getElementById('txt').textContent = `position: relative;`;
+}
+else if(selectedValue === 'positionabsolute'){
+document.getElementById('txt').textContent = `position: absolute;`;
+}
+else if(selectedValue === 'positionfixed'){
+document.getElementById('txt').textContent = `position: fixed;`;
+}
+else if(selectedValue === 'top'){
+document.getElementById('txt').textContent = `top: 20px;`;
+}
+else if(selectedValue === 'right'){
+document.getElementById('txt').textContent = `right: 20px;`;
+}
+else if(selectedValue === 'bottom'){
+document.getElementById('txt').textContent = `bottom: 20px;`;
+}
+else if(selectedValue === 'left'){
+document.getElementById('txt').textContent = `left: 20px;`;
+}
+else if(selectedValue === 'liststyle'){
+document.getElementById('txt').textContent = `list-style: square inside url(mark.png);`;
+}
+else if(selectedValue === 'jsreplace'){
+document.getElementById('txt').textContent = `<p id="replace">Before</p>
+<button type="button" onclick="document.getElementById('replace').innerHTML = 'After'">Click</button>`;
+}
+else if(selectedValue === 'hide'){
+document.getElementById('txt').textContent = `<p id="hide">Text</p>
+<button type="button" onclick="document.getElementById('hide').style.display = 'none'">Click</button>`;
+}
+else if(selectedValue === 'getelementbyid'){
+document.getElementById('txt').textContent = `document.getElementById("sample").innerHTML = "Text";`;
+}
+else if(selectedValue === 'function'){
+document.getElementById('txt').textContent = `function sample() {
+
+}`;
+}
+else if(selectedValue === 'const'){
+document.getElementById('txt').textContent = `const sample = "*";`;
+}
+else if(selectedValue === 'let'){
+document.getElementById('txt').textContent = `let sample = "*";`;
+}
+else if(selectedValue === 'var'){
+document.getElementById('txt').textContent = `var sample = "*";`;
+}
+else if(selectedValue === 'getfullyear'){
+document.getElementById('txt').textContent = `const date = new Date();
+document.getElementById("demo").innerHTML = date.getFullYear();`;
+}
+else if(selectedValue === 'date'){
+document.getElementById('txt').textContent = `const date = new Date();
+document.getElementById("demo").innerHTML = date;`;
+}
+else if(selectedValue === 'gettime'){
+document.getElementById('txt').textContent = `const date = new Date();
+document.getElementById("demo").innerHTML = date.getTime();`;
+}
+else if(selectedValue === 'getday'){
+document.getElementById('txt').textContent = `const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const date = new Date();
+let day = days[date.getDay()];
+document.getElementById("demo").innerHTML = day;`;
+}
+else if(selectedValue === 'toutcstring'){
+document.getElementById('txt').textContent = `const date = new Date();
+document.getElementById("demo").innerHTML = date.toUTCString();`;
+}
+else if(selectedValue === 'clock'){
+document.getElementById('txt').textContent = `function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}`;
+}
+else if(selectedValue === 'syntax'){
+document.getElementById('txt').textContent = `<?php
+
+?>`;
+}
+else if(selectedValue === 'phpcomment'){
+document.getElementById('txt').textContent = `// This is a C++ style single-line comment`;
+}
+else if(selectedValue === 'phpmultilinecm'){
+document.getElementById('txt').textContent = `/*
+This is a multi-line comment.
+Text.
+Text.
+*/`;
+}
+else if(selectedValue === 'echo'){
+document.getElementById('txt').textContent = `echo "This code will execute.";`;
+}
+else if(selectedValue === 'variable'){
+document.getElementById('txt').textContent = `$name = "Text";
+echo $name;`;
+}
+else if(selectedValue === 'string'){
+document.getElementById('txt').textContent = `$string = "Sample " . "Text";`;
+}
+else if(selectedValue === 'integer'){
+document.getElementById('txt').textContent = `$integer = 123;`;
+}
+else if(selectedValue === 'float'){
+document.getElementById('txt').textContent = `$float = 3.14;`;
+}
+else if(selectedValue === 'bool'){
+document.getElementById('txt').textContent = `$bool = true;`;
+}
+else if(selectedValue === 'sum'){
+document.getElementById('txt').textContent = `$sum = $number1 + $number2;`;
+}
+else if(selectedValue === 'array'){
+document.getElementById('txt').textContent = `$array = array("apple", "banana", "cherry");`;
+}
+else if(selectedValue === 'shortarray'){
+document.getElementById('txt').textContent = `$array = [1, 2, 3];`;
+}
+else if(selectedValue === 'associativearray'){
+document.getElementById('txt').textContent = `$array = [
+"lemon" => "yellow",
+"apple" => "red",
+"banana" => "yellow",
+];`;
+}
+else if(selectedValue === 'unset'){
+document.getElementById('txt').textContent = `unset($array[1]);`;
+}
+else if(selectedValue === 'if'){
+document.getElementById('txt').textContent = `if ($a > $b) {
+echo "a is greater than b";
+}
+elseif ($a === $b) {
+echo "a is equal to b";
+}
+else {
+echo "a is less than b";
+}`;
+}
+else if(selectedValue === 'variablecurly'){
+document.getElementById('txt').textContent = `$name = "Sample";
+$string = "Hello World, {$name}";
+echo $string . PHP_EOL;`;
+}
+else if(selectedValue === 'while'){
+document.getElementById('txt').textContent = `$count = 0;
+while ($count < 3) {
+echo "This is the " . $count . " loop.\n";
+$count++;
+}`;
+}
+else if(selectedValue === 'for'){
+document.getElementById('txt').textContent = `for ($i = 1; $i <= 10; $i++) {
+echo $i;
+}`;
+}
+else if(selectedValue === 'foreach'){
+document.getElementById('txt').textContent = `$array = [
+'Text 1',
+'Text 2',
+'Text 3'
+];
+foreach($array as $key => $val){
+echo $val . PHP_EOL;
+}`;
+}
+else if(selectedValue === 'callable'){
+document.getElementById('txt').textContent = `$sayHello = function(){
+echo "hello {$name}" . PHP_EOL;
+};
+
+call_user_func($sayHello, "Sample");
+call_user_func($sayHello, "Text");`;
+}
+else if(selectedValue === 'basictypescript'){
+document.getElementById('txt').textContent = `import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root', 
+  templateUrl: './app.component.html', 
+  styleUrls: ['./app.component.css'] 
+})
+export class AppComponent {
+  title = 'My Angular App'; 
+  count = 0;
+
+  increment() {
+    this.count++;
+  }
+}`;
+}
+else if(selectedValue === 'basichtml'){
+document.getElementById('txt').textContent = `<h1>{{ title }}</h1>
+
+<p>count: {{ count }}</p>
+
+<button (click)="increment()">count up</button> 
+
+<app-user-profile></app-user-profile>`;
+}
+else if(selectedValue === 'eventbinding'){
+document.getElementById('txt').textContent = `<button (click)="onClick()">Click</button>`;
+}
+else if(selectedValue === 'propertybinding'){
+document.getElementById('txt').textContent = `<img [src]="imageUrl" />`;
+}
+else if(selectedValue === 'twowaybinding'){
+document.getElementById('txt').textContent = `<input [(ngModel)]="user.name" />`;
+}
+else if(selectedValue === 'ngiftypescript'){
+document.getElementById('txt').textContent = `// app.component.ts
+export class AppComponent {
+  isLoggedIn = false;
+
+  toggleLogin() {
+    this.isLoggedIn = !this.isLoggedIn;
+  }
+}`;
+}
+else if(selectedValue === 'ngifhtml'){
+document.getElementById('txt').textContent = `<!-- app.component.html -->
+<div *ngIf="isLoggedIn">
+  Welcome, user!
+</div>
+<button (click)="toggleLogin()">Login/Logout</button>`;
+}
+else if(selectedValue === 'ngfortypescript'){
+document.getElementById('txt').textContent = `import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Required for standalone components
+
+@Component({
+  selector: 'app-list',
+  standalone: true, // If using Angular 14+
+  imports: [CommonModule], // Import CommonModule if standalone: true
+  template: '...',
+})
+export class ListComponent {
+  items = ['Apple', 'Banana', 'Cherry'];
+}`;
+}
+else if(selectedValue === 'ngforhtml'){
+document.getElementById('txt').textContent = `<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>`;
+}
+else if(selectedValue === 'ngclasstypescript'){
+document.getElementById('txt').textContent = `import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  templateUrl: './my-component.html',
+  styleUrls: ['./my-component.css']
+})
+export class MyComponent {
+  canSave = false;
+  isSpecial = true;
+}`;
+}
+else if(selectedValue === 'ngclasshtml'){
+document.getElementById('txt').textContent = `<div [ngClass]="{'saveable': canSave, 'special': isSpecial}">
+  This div has dynamic classes.
+</div>`;
+}
+else if(selectedValue === 'ngstyletypescript'){
+document.getElementById('txt').textContent = `import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  templateUrl: './my-component.html',
+  styleUrls: ['./my-component.css'],
+  standalone: true // Use 'standalone: true' for standalone components
+})
+export class MyComponent {
+  isLarge = true;
+  isColored = true;
+
+  get currentStyles() {
+    return {
+      'font-size': this.isLarge ? '24px' : '12px',
+      'background-color': this.isColored ? 'lightblue' : 'lightgray',
+      'border': '1px solid black'
+    };
+  }
+}`;
+}
+else if(selectedValue === 'ngstylehtml'){
+document.getElementById('txt').textContent = `<div [style.background-color]="isHighlighted ? 'yellow' : 'white'">
+  Dynamically styled text
+</div>`;
+}
+else if(selectedValue === 'ngmodeltypescript'){
+document.getElementById('txt').textContent = `import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+
+@Component({
+  selector: 'app-root',
+  standalone: true, // Mark component as standalone
+  imports: [FormsModule], // Add to imports array
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title = 'ngModel-sample';
+  name = ''; // Property to bind
+}`;
+}
+else if(selectedValue === 'ngmodelhtml'){
+document.getElementById('txt').textContent = `<!-- app.component.html -->
+<div>
+  <!-- Binds the input value to the 'name' property in the component -->
+  <input type="text" [(ngModel)]="name" name="userName">
+</div>
+<div>
+  <!-- The 'name' property value is displayed here -->
+  <p>Hello, {{ name }}!</p>
+</div>`;
+}
+else if(selectedValue === 'templatereferencevariable'){
+document.getElementById('txt').textContent = `<input #usernameInput />
+<button (click)="sample(usernameInput.value)">Sample</button>`;
+}
+else if(selectedValue === 'valid'){
+document.getElementById('txt').textContent = `<div *ngIf="form.get('sample')?.invalid && form.get('email')?.touched">
+  Invalid
+</div>`;
+}
+else if(selectedValue === 'datepipe'){
+document.getElementById('txt').textContent = `{{ value | date [ : format [ : timezone [ : locale ] ] ] }}`;
+}
+else if(selectedValue === 'uppercasepipe'){
+document.getElementById('txt').textContent = `{{ value | uppercase }}`;
+}
+else if(selectedValue === 'lowercasepipe'){
+document.getElementById('txt').textContent = `{{ value | lowercase }}`;
+}
+else if(selectedValue === 'titlecasepipe'){
+document.getElementById('txt').textContent = `{{ value | titlecase }}`;
+}
+else if(selectedValue === 'slicepipe'){
+document.getElementById('txt').textContent = `{{ value | slice : start [ : end ] }}`;
+}
+else if(selectedValue === 'decimalpipe'){
+document.getElementById('txt').textContent = `{{ value | number [ : digitsInfo [ : locale ] ] }}`;
+}
+else if(selectedValue === 'percentpipe'){
+document.getElementById('txt').textContent = `{{ value | percent [ : digitsInfo [ : locale ] ] }}`;
+}
+else if(selectedValue === 'currencypipe'){
+document.getElementById('txt').textContent = `{{ value | currency [ : currencyCode [ : display [ : digitsInfo [ : locale ] ] ] ] }}`;
+}
+else if(selectedValue === 'keyvaluepipecomponent'){
+document.getElementById('txt').textContent = `public animalMap = new Map([[1, 'cat'], [2, 'dog'], [12, 'panda']]);`;
+}
+else if(selectedValue === 'keyvaluepipetemplate'){
+document.getElementById('txt').textContent = `<div *ngFor="let animal of animalMap | keyvalue">
+  {{animal.key}}: {{animal.value}}
+</div>`;
+}
+else if(selectedValue === 'jsonpipecomponent'){
+document.getElementById('txt').textContent = `jsonObj = {
+    name: 'Sample',
+    age: 20,
+    address: {
+      prefecture: 'Tokyo',
+      Post: '123-4567'
+    }
+  };`;
+}
+else if(selectedValue === 'jsonpipetemplate'){
+document.getElementById('txt').textContent = `<div>{{ jsonObj | json }}</div>`;
+}
+else if(selectedValue === 'asyncpipecomponent'){
+document.getElementById('txt').textContent = `public timeObserver = new Observable<string>((observer: Observer<string>) => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });`;
+}
+else if(selectedValue === 'asyncpipetemplate'){
+document.getElementById('txt').textContent = `<div>Time: {{ timeObserver | async }}</div>`;
+}
+else if(selectedValue === 'jqfunction'){
+document.getElementById('txt').textContent = `$(function(){
+  
+});`;
+}
+else if(selectedValue === 'alert'){
+document.getElementById('txt').textContent = `alert('Click');`;
+}
+else if(selectedValue === 'jqselector'){
+document.getElementById('txt').textContent = `$("#text");`;
+}
+else if(selectedValue === 'css'){
+document.getElementById('txt').textContent = `$("#text").css("color", "#000000");`;
+}
+else if(selectedValue === 'fadeto'){
+document.getElementById('txt').textContent = `$("#text").fadeTo();`;
+}
+else if(selectedValue === 'slideup'){
+document.getElementById('txt').textContent = `$("#text").slideUp();`;
+}
+else if(selectedValue === 'slidedown'){
+document.getElementById('txt').textContent = `$("#text").slideDown();`;
+}
+else if(selectedValue === 'slidetoggle'){
+document.getElementById('txt').textContent = `$("#text").slideToggle();`;
+}
+else if(selectedValue === 'select'){
+document.getElementById('txt').textContent = `$("#text").select();`;
+}
+else if(selectedValue === 'focus'){
+document.getElementById('txt').textContent = `$("#text").focus();`;
+}
+else if(selectedValue === 'text'){
+document.getElementById('txt').textContent = `$("#text").text();`;
+}
+else if(selectedValue === 'wrap'){
+document.getElementById('txt').textContent = `$("#text").wrap();`;
+}
+else if(selectedValue === 'replacewith'){
+document.getElementById('txt').textContent = `$("#text").replaceWith();`;
+}
+else if(selectedValue === 'jqhtml'){
+document.getElementById('txt').textContent = `$("#text").html();`;
+}
+else if(selectedValue === 'prepend'){
+document.getElementById('txt').textContent = `$("#text").prepend();`;
+}
+else if(selectedValue === 'append'){
+document.getElementById('txt').textContent = `$("#text").append();`;
+}
+else if(selectedValue === 'after'){
+document.getElementById('txt').textContent = `$("#text").after();`;
+}
+else if(selectedValue === 'before'){
+document.getElementById('txt').textContent = `$("#text").before();`;
+}
+else if(selectedValue === 'remove'){
+document.getElementById('txt').textContent = `$("#text").remove();`;
+}
+else if(selectedValue === 'length'){
+document.getElementById('txt').textContent = `$("#text").length;`;
+}
+else if(selectedValue === 'parent'){
+document.getElementById('txt').textContent = `$("#text").parent();`;
+}
+else if(selectedValue === 'find'){
+document.getElementById('txt').textContent = `$("#text").find();`;
+}
+else if(selectedValue === 'children'){
+document.getElementById('txt').textContent = `$("#text").children();`;
+}
+else if(selectedValue === 'end'){
+document.getElementById('txt').textContent = `$("#text").end();`;
+}
+else if(selectedValue === 'empty'){
+document.getElementById('txt').textContent = `$("#text").empty();`;
+}
+else if(selectedValue === 'sort'){
+document.getElementById('txt').textContent = `$("#text").sort();`;
+}
+else if(selectedValue === 'next'){
+document.getElementById('txt').textContent = `$("#text").next();`;
+}
+else if(selectedValue === 'show'){
+document.getElementById('txt').textContent = `$("#text").show();`;
+}
+else if(selectedValue === 'jqhide'){
+document.getElementById('txt').textContent = `$("#text").hide();`;
+}
+else if(selectedValue === 'toggle'){
+document.getElementById('txt').textContent = `$("#text").toggle();`;
+}
+else if(selectedValue === 'get'){
+document.getElementById('txt').textContent = `$("#text").get();`;
+}
+else if(selectedValue === 'prev'){
+document.getElementById('txt').textContent = `$("#text").prev();`;
+}
+else if(selectedValue === 'contents'){
+document.getElementById('txt').textContent = `$("#text").contents();`;
+}
+else if(selectedValue === 'every'){
+document.getElementById('txt').textContent = `$("#text").every();`;
+}
+else if(selectedValue === 'noop'){
+document.getElementById('txt').textContent = `$("#text").noop();`;
+}
+else if(selectedValue === 'template'){
+document.getElementById('txt').textContent = `<p>{{ message }}</p>`;
+}
+else if(selectedValue === 'vtext'){
+document.getElementById('txt').textContent = `<p v-text="message"></p>`;
+}
+else if(selectedValue === 'vbind'){
+document.getElementById('txt').textContent = `<img v-bind:src="imageUrl">`;
+}
+else if(selectedValue === 'vbindclass'){
+document.getElementById('txt').textContent = `<div :class="{ active: isActive, 'text-danger': hasError }"></div>`;
+}
+else if(selectedValue === 'vbindstyle'){
+document.getElementById('txt').textContent = `<div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>`;
+}
+else if(selectedValue === 'vmodel'){
+document.getElementById('txt').textContent = `<input type="text" v-model="message">
+<p>{{ message }}</p>`;
+}
+else if(selectedValue === 'von'){
+document.getElementById('txt').textContent = `<button v-on:click="onClick">Click</button>`;
+}
+else if(selectedValue === 'vif'){
+document.getElementById('txt').textContent = `<p v-if="isLoggedIn">Welcome</p>`;
+}
+else if(selectedValue === 'velseif'){
+document.getElementById('txt').textContent = `<p v-else-if="isLoggedIn">Sample</p>`;
+}
+else if(selectedValue === 'velse'){
+document.getElementById('txt').textContent = `<p v-else>Login</p>`;
+}
+else if(selectedValue === 'vshow'){
+document.getElementById('txt').textContent = `<div v-show="isShow">Show</div>`;
+}
+else if(selectedValue === 'vfor'){
+document.getElementById('txt').textContent = `<ul>
+  <li v-for="(item, index) in items" :key="index">
+    {{ item.name }}
+  </li>
+</ul>`;
+}
+else if(selectedValue === 'computed'){
+document.getElementById('txt').textContent = `computed: {
+  reversedMessage: function() {
+    return this.message.split('').reverse().join('');
+  }
+}`;
+}
+else if(selectedValue === 'watch'){
+document.getElementById('txt').textContent = `watch: {
+  message: function(newValue, oldValue) {
+    console.log('Change:', newValue);
+  }
+}`;
+}
+else if(selectedValue === 'component'){
+document.getElementById('txt').textContent = `function Sample(props) {
+  return <h1>Sample, {props.name}</h1>;
+}`;
+}
+else if(selectedValue === 'jsx'){
+document.getElementById('txt').textContent = `const element = <h1>Sample</h1>;`;
+}
+else if(selectedValue === 'props'){
+document.getElementById('txt').textContent = `function App() {
+  return <Sample name="Text" />;
+}
+
+function Sample(props) {
+  return <h1>Title name, {props.name}</h1>;
+}`;
+}
+else if(selectedValue === 'state'){
+document.getElementById('txt').textContent = `import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click
+      </button>
+    </div>
+  );
+}`;
+}
+else if(selectedValue === 'eventhandling'){
+document.getElementById('txt').textContent = `function Button() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+  return <button onClick={handleClick}>Click</button>;
+}`;
+}
+else if(selectedValue === 'list'){
+document.getElementById('txt').textContent = `function UserList({ users }) {
+  return (
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>
+          {user.name}
+        </li>
+      ))}
+    </ul>
+  );
+}`;
+}
+else if(selectedValue === 'basic'){
+document.getElementById('txt').textContent = `import React from 'react'; // React
+import ReactDOM from 'react-dom/client'; // ReactDOM
+
+function App() {
+  return (
+    <div>
+      <h1>My React App</h1>
+      <Counter /> {/* Sample */}
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);`;
+}
+else if(selectedValue === 'str'){
+document.getElementById('txt').textContent = `const str: string = "Text";`;
+}
+else if(selectedValue === 'num'){
+document.getElementById('txt').textContent = `const num: number = 10;`;
+}
+else if(selectedValue === 'arry'){
+document.getElementById('txt').textContent = `const arry: Array<string> = ["Sample","Text"];`;
+}
+else if(selectedValue === 'func'){
+document.getElementById('txt').textContent = `const funcSample = (str: string): void => {
+    console.log(str);  
+};`;
+}
+else if(selectedValue === 'obj'){
+document.getElementById('txt').textContent = `const obj: { str: string, num: number };
+obj = {
+    str: "Text",
+    num: 10,
+};`;
+}
+else{
+document.getElementById('txt').textContent = ``;
+}
+phoff();
+});
+
+}
+
+</script>
+</head>
+
+<body>
+
+<header id="top">
+
+</header>
+
+<main>
+
+<article>
+
+<h1 id="homed">Magical Code</h1>
+
+<div class="holder">
+<div class="placeholder">
+<br>
+//* Pscode *//
+</div>
+<textarea readonly class="txt" id="txt" name="txt" onkeyup="ckst(), input();"></textarea>
+</div>
+<textarea style="display:none" id="orit" name="orit"></textarea>
+</div>
+
+<div>
+<select id="language" class="temp" name="language">
+<option value="default">## select language ##</option>
+<option value="html">HTML</option>
+<option value="css">CSS</option>
+<option value="javascript">JavaScript</option>
+<option value="php">PHP</option>
+<option value="angular">Angular</option>
+<option value="jquery">jQuery</option>
+<option value="vue">Vue</option>
+<option value="react">React</option>
+</select>
+<select id="code" class="temp" name="code">
+<option value="default">## select code ##</option>
+</select>
+<p id="output"></p>
+</div>
+
+<div class="inwd">
+<div class="inps">
+<!--<label class="push"><input id="show" value="Push" type="button" onclick="push();">Push</label>-->
+<label class="copy"><input id="copy" value="Copy" type="button">Copy</label>
+</div>
+</div>
+
+</article>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
